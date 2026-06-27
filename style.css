@@ -1,0 +1,181 @@
+:root{
+    --bg-color: rgba(243, 243, 243, 0.212);
+    --card-color: rgba(248, 248, 248, 0.171);
+    --surface-color:rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --text-subtitle-color:rgb(59, 59, 59);
+    --hover-color:rgb(255, 255, 255);
+    --border-color:rgb(211, 208, 208);
+    --accent-color:rgb(121, 121, 163);
+    --box-shadow: rgb(216, 210, 210);
+    --tab-color: rgb(56, 55, 55);
+}
+
+.dark{
+    --bg-color: rgb(0, 0, 0);
+    --card-color: rgb(37, 37, 37);
+    --surface-color:rgb(0, 0, 0);
+    --text-color: rgb(241, 241, 241);
+    --text-subtitle-color:rgb(211, 210, 210);
+    --hover-color: rgb(82, 80, 80);
+    --border-color:rgb(83, 83, 83);
+    --accent-color:rgb(223, 15, 15);
+    --box-shadow: rgb(122, 118, 118);
+    --tab-color: rgb(117, 116, 116);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80%;
+    max-width: 600px;
+    min-height: 80vh;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-color: var(--card-color);
+    box-shadow: 1px 6px 20px var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.background-change{
+    width: 80px;
+    padding: 8px 0px;
+    background-color: transparent;
+    gap: 4px;
+    color: var(--text-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 14px; 
+    padding: 0 12px;
+    gap: 8px;
+}
+
+
+
+.tab{
+    flex: 1;
+    padding: 9px 10px;
+    border-radius: 7px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--tab-color);
+}
+
+.active{
+    color: var(--accent-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+    
+}
+
+.tab:hover{
+    background-color: var(--hover-color);
+}
+
+.main-content{
+    background-color: var(--surface-color);
+    padding: 16px;
+    border-radius: 0 0 20px 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.clock-face{
+    width: 250px;
+    height: 250px;
+    border: 4px solid var(--border-color);
+    border-radius: 50%;
+    position: relative;
+}
+
+.second{
+    position: absolute;
+    width: 2px;
+    height: 85px;
+    background-color: var(--accent-color);
+    left: 50%;
+    bottom:50%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+}
+
+.minute{
+    position: absolute;
+    width: 3px;
+    height: 80px;
+    background-color: var(--border-color);
+    left: 50%;
+    bottom:50%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+}
+
+.hour{
+    position: absolute;
+    width: 4px;
+    height: 65px;
+    background-color: var(--border-color);
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+}
+
+.center-dot{
+   position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--text-color);
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50%; 
+    transform: translate(-50%, 50%);
+    z-index: 10;
+}
+
+.clock-number {
+    position: absolute;
+    font-size: 14px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}

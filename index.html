@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web clock</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="header">
+        <h1>clock</h1>
+        <button class="background-change">
+          <i class="fa-regular fa-moon"></i> <span>Dark</span>
+        </button>
+      </div>
+      <nav>
+        <button class="tab active" data-target="clock-sec" id="clock-btn">
+          Clock
+        </button>
+        <button class="tab" data-target="stopwatch-sec" id="stopwatch-btn">
+          Stopwatch
+        </button>
+        <button class="tab" data-target="timer-sec" id="timer-btn">
+          Timer
+        </button>
+        <button class="tab" data-target="alarm-sec" id="alarm-btn">
+          Alarm
+        </button>
+      </nav>
+      <div class="main-content">
+        <div class="section" id="clock-sec">
+          <div class="clock-face">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+            <div class="center-dot"></div>
+          </div>
+        </div>
+        <div class="section hidden" id="stopwatch-sec">oga i know say you go check here too fool 🤣🤣🤣🤣. go buy clock</div>
+        <div class="section hidden" id="timer-sec">you still get mind check here after the first one, you nor really get sense 😂😂😂😂</div>
+        <div class="section hidden" id="alarm-sec">you finaly made it to the last one, your papa 😂😂😂😂</div>
+      </div>
+    </main>
+  </body>
+</html>
