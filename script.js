@@ -53,6 +53,8 @@ function updateClock() {
     secondHand.style.transform = 'rotate(' + secondDegrees + 'deg)'
     minuteHand.style.transform = 'rotate(' + minuteDegrees + 'deg)'
     hourHand.style.transform = 'rotate(' + hourDegrees + 'deg)'
+
+   document.querySelector('.digital-time').textContent = String(hours).padStart(2,'0') + ':' + String(minutes).padStart(2,'0') + ':' + String(seconds).padStart(2,'0')
 }
 
 // Step 6 - start the clock
@@ -83,7 +85,6 @@ for(let i = 1; i <= 12; i++){
    // position the number
    // 50% is the center, we add/subtract x and y to move it around the circle
    newDiv.style.left = (50 + (x / 2.5)) + '%'
-   newDiv.style.top = (50 - (y / 2.5)) + '%'
-   
+   newDiv.style.top = (50 - (y / 2.5)) + '%' 
    clockFace.appendChild(newDiv)
 }
